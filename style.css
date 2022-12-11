@@ -1,0 +1,260 @@
+html, body{
+    height: 100%;
+    margin: 0;
+    font-family: 'Anek Devanagari', sans-serif;
+}
+
+
+/* Main Layout Blocks */
+
+/* container */
+
+.container{
+    display: grid;
+    grid: 80px 80px min-content/ 1fr 4fr;
+}
+
+
+/* header/navbar */
+
+.header, .navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px;
+}
+
+.header{
+    background-color: white;
+    grid-area: 1 / 2 / 2 / 3;
+}
+
+.navbar{
+    background-color: white;
+    grid-area: 2 / 2 / 3 / 3;
+}
+
+.text{
+    border-radius: 9px;
+    border-color: grey;
+    background-color: whitesmoke;
+}
+.nameBold{
+    font-size: 24px;
+}
+
+.header1half, .header2half{
+    display: grid;
+    gap: 15px;
+}
+
+.header1half{
+    grid-template-columns: 1fr 16fr;
+}
+
+.header2half{
+    grid-template-columns: repeat(2, 1fr) 3fr;
+    place-items: center;
+    justify-content: end;
+}
+
+
+.welcome{
+    justify-content: start;
+}
+
+.navButtons{
+    justify-content: end;
+}
+
+input[type=button]{
+    background-color: lightskyblue;
+    border: none;
+    color: white;
+    width: 70px;
+    border-radius: 25px;
+    padding: 7px;
+    font-weight: bold;
+}
+
+/* sidebar */
+
+.sidebar{
+    background-color: lightskyblue;
+    grid-area: 1 / 1 / 4 / 2;
+    display: grid;
+    grid-template-rows: 1fr 4fr 8fr;
+    color: white;
+}
+
+.top{
+    padding-left: 15px;
+}
+
+ul{
+    padding: 15px;
+}
+
+li{
+    list-style: none;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 20px;
+    padding: 10px;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+/* content */
+
+.content{
+    background-color: whitesmoke;
+    grid-area: 3 / 2 / 4 / 3;
+    display: grid;
+    grid: 1fr 1fr / 3fr 1fr;
+    gap: 15px; 
+    padding: 15px;
+    box-shadow: inset 0px 10px 10px -10px;
+}
+
+.projects, .announcements, .trending{
+    background-color: inherit;
+    display: grid;
+    grid-template-rows: 30px 1fr;
+}
+
+.projects{
+    grid-area: 1/1/3/2;
+}
+.announcements{
+    grid-area: 1/2/2/3;
+}
+.trending{
+    grid-area: 2/2/3/3;
+}
+
+.contentbox{
+    display: grid;
+    grid-template-rows: 4fr 1fr;
+    padding: 15px;
+    box-shadow: 10px 10px 10px -10px;
+}
+
+.contentbox > p > span {
+    color: black;
+}
+.contentbox > p{
+    grid-row: 1/2;
+    font-size: 12px;;
+    color: grey;
+}
+
+.contentbox > p > span{
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.functionbuttons{
+    grid-row:2/3;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding: 15px;
+    gap: 15px;
+}
+
+.yourprojects{
+    grid-row: 1/2;
+    display: flex;
+    align-items: center;    
+}
+.contentboxcontainer{
+    grid-row: 2/3;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 15px;
+}
+
+.contentbox{
+    background-color: white;
+    height: 150px;
+    border-radius: 10px;
+    border-left: 5px solid rgba(166, 37, 37, 0.789);
+}
+
+.announcements > p, .trending > p{
+    grid-row: 1/2;
+    background-color: inherit;
+    display: flex;
+    align-items: center;
+}
+
+.announcementbox, .trendingbox{
+    grid-row: 2/3;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 10px 10px 10px -10px;
+}
+.announcementbox{
+    display: grid;
+    grid-template-rows: repeat(3, 100px);
+    padding: 15px;
+}
+
+.announcementbox > p{
+    margin: 0;
+    font-size: 13px;
+}
+.heading + p{
+    color: grey;
+    font-size: .7em;
+}
+
+.logoimages{
+    width: 30px;
+}
+
+.trendingboxdivs{
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.trendingboxdivs img{
+    display: inline-block;
+    padding: 0 15px;
+}
+
+.trendingboxdivs p{
+    display: inline-block;
+    color: grey;
+    font-size: .7em;
+}
+.trendingboxdivs span{
+    color: black;
+    font-size: 13px;
+}
+.trendingbox{
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* mix of main of main layout blocks */
+
+.top, .welcome, .navButtons{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding-left: 15px;
+}
+
+.welcome > p, .header2half > p, .announcementbox > .heading{
+    font-weight: bold;
+}
+
+
